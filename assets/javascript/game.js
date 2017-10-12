@@ -64,16 +64,20 @@ $(document).on('click', ".crystal" ,function(){
 
 
 	if(previous >random_number){
-		lost--;
-		$("#lost").html("you loose" ,lost);
+		lost++;
+		$("#lost").html("you loose :" + lost);
 		previous = 0;
+		
 		resetAndStart();
 	}
 	else if(previous === random_number){
 		win++;
 
-		$("#win").html("you win" ,win);
+	$("#win").html("you win :" + win);
+		
 		previous = 0;
+		
+		
 		resetAndStart();
 	}
 });
